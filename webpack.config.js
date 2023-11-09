@@ -16,7 +16,12 @@ module.exports = {
         rules: [
             {
                 test: /\.s?css$/i, // Match CSS, SCSS files
-                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'], // Use for CSS file per JS file which contains CSS
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader'
+                ], // Use for CSS file per JS file which contains CSS
             },
             {
                 test: /\.js$/, // Match .js files
@@ -41,7 +46,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            favicon: './favicon.ico',           
+            favicon: './favicon.ico',
             filename: 'index.html',
             template: './index.html',
         }),
@@ -53,8 +58,9 @@ module.exports = {
         },
         port: 3000, // Port for development server
         open: true, // Open in web browser
+        watchFiles: ["./*.html", "src/**/*.html"],
         hot: true, // Enable webpack's Hot Module Replacement feature
         compress: true,
-        historyApiFallback: true,        
+        historyApiFallback: true,
     },
 };
