@@ -3,6 +3,7 @@
 Creating a Webpack boilerplate for an HTML, SCSS, and JS project involves configuring Webpack to bundle your SCSS and JS files, and generating an HTML file to include your styles and scripts.
 
 **Prerequisites:**
+
 Before you start, make sure you have Node.js and npm (Node Package Manager) installed on your system.
 
 **Build and Run**
