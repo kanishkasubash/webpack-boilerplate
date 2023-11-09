@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development', // Set to mode wether "development" or "production"
     entry: {
-        bundle: path.resolve(__dirname, 'src/indx.js'), // Entry point of your application
+        bundle: path.resolve(__dirname, 'src/index.js'), // Entry point of your application
     },
     output: {
         path: path.resolve(__dirname, 'dist'), // Output directory
@@ -41,8 +41,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            favicon: './favicon.ico',
-            title: 'Webpack Starter Template',            
+            favicon: './favicon.ico',           
             filename: 'index.html',
             template: './index.html',
         }),
